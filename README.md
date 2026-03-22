@@ -37,14 +37,16 @@ This skill is provided as plain Markdown files and is **compatible with any AI a
 # 克隆仓库
 git clone https://github.com/TanShilongMario/PromptSkill4image.git
 
-# 复制到 Cursor 全局 skills 目录
-cp -r PromptSkill4image/prompt-engineering ~/.cursor/skills/
+# 复制到 Cursor 全局 skills 目录（skill 需要放在一个子目录中）
+mkdir -p ~/.cursor/skills/prompt-engineering
+cp PromptSkill4image/SKILL.md PromptSkill4image/vocabulary-banks.md PromptSkill4image/examples.md ~/.cursor/skills/prompt-engineering/
 ```
 
 **项目级安装**（仅当前项目，可随仓库共享）：
 
 ```bash
-cp -r PromptSkill4image/prompt-engineering /your-project/.cursor/skills/
+mkdir -p /your-project/.cursor/skills/prompt-engineering
+cp PromptSkill4image/SKILL.md PromptSkill4image/vocabulary-banks.md PromptSkill4image/examples.md /your-project/.cursor/skills/prompt-engineering/
 ```
 
 > 注意：请勿放入 `~/.cursor/skills-cursor/`，该目录为 Cursor 内置保留目录。
@@ -62,10 +64,10 @@ git clone https://github.com/TanShilongMario/PromptSkill4image.git
 cd /your-project
 
 # 创建 skills 目录（如不存在）
-mkdir -p .claude/skills
+mkdir -p .claude/skills/prompt-engineering
 
 # 复制 skill
-cp -r PromptSkill4image/prompt-engineering .claude/skills/
+cp PromptSkill4image/SKILL.md PromptSkill4image/vocabulary-banks.md PromptSkill4image/examples.md .claude/skills/prompt-engineering/
 ```
 
 之后在对话中提及"分析提示词"或"prompt engineering"即可触发。
@@ -74,10 +76,11 @@ cp -r PromptSkill4image/prompt-engineering .claude/skills/
 
 ### 其他 AI Agent（通用方式）
 
-对于 **Windsurf、Copilot Workspace、Aider** 等其他 AI 编码工具，将整个 `prompt-engineering/` 文件夹放入项目中，并在需要时手动引用：
+对于 **Windsurf、Copilot Workspace、Aider** 等其他 AI 编码工具，将文件放入项目目录后手动引用：
 
 ```bash
-cp -r PromptSkill4image/prompt-engineering /your-project/
+mkdir -p /your-project/prompt-engineering
+cp PromptSkill4image/SKILL.md PromptSkill4image/vocabulary-banks.md PromptSkill4image/examples.md /your-project/prompt-engineering/
 ```
 
 然后在对话中直接引用文件：
